@@ -8,6 +8,7 @@ const wss = new ws.Server({
 
 wss.on('connection', (ws) => {
  ws.on('message', (message) => {
-
+    const message = JSON.parse(messageString);
+    console.log(`new message`, message);
  });
 });
